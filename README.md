@@ -1,6 +1,6 @@
-# SentinelFlow
+# sentinelflow-wazuh-soar
 
-**A lightweight, AI-assisted SOAR pipeline: Wazuh alerts are grouped, enriched, triaged by a local LLM, checked by a validation layer, sent to DFIR-IRIS, and (for serious alerts) backed by automatic Velociraptor evidence collection.**
+**AI-assisted SOAR pipeline for an 8 GB lab: Wazuh alerts are grouped, enriched, triaged by a local LLM, validated by code, sent to DFIR-IRIS, with automatic Velociraptor evidence collection.**
 
 Everything is open-source and the whole lab runs on one laptop with **8 GB of RAM**.
 
