@@ -6,8 +6,8 @@ The tools are open-source or free to use (Wazuh, DFIR-IRIS, Velociraptor, FastAP
 
 ![Architecture](docs/architecture.png)
 
-> **Demo video (2 min 18 s, captions only, no audio):** [docs/SentinelFlow_demo.mp4](docs/SentinelFlow_demo.mp4)
 
+> **Demo video (2 min 18 s, captions only, no audio):** [docs/SentinelFlow_demo.mp4](docs/SentinelFlow_demo.mp4)
 ## Why this project
 
 Most SOAR demos need 16 GB or more and send alert data to a cloud LLM. This project asks a different question: **how far can a small, fully local model go in SOC triage when it is wrapped in proper validation?** The answer is measured, not assumed (see [Evaluation](#evaluation)), and the failures that were found are documented below instead of hidden.
