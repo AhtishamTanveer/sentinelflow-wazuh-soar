@@ -6,7 +6,7 @@ Everything is open-source and the whole lab runs on one laptop with **8 GB of RA
 
 ![Architecture](docs/architecture.png)
 
-> Demo video: _add the link here_
+> **Demo video (2 min 18 s, captions only, no audio):** [docs/SentinelFlow_demo.mp4](docs/SentinelFlow_demo.mp4)
 
 ## Why this project
 
