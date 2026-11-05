@@ -1,0 +1,506 @@
+[
+ {
+  "i": 1,
+  "rule": "60204",
+  "expected": "true_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 39.1,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "Multiple Windows logon failures with a public source IP and a high-criticality asset indicate a possible password-guessing attempt.",
+   "next_steps": [
+    "Investigate the source IP and determine if it's a legitimate IP address.",
+    "Verify if the target user is a legitimate user and not a test user.",
+    "Monitor the system for further logon attempts and consider implementing additional security measures."
+   ]
+  }
+ },
+ {
+  "i": 2,
+  "rule": "5712",
+  "expected": "true_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 41.1,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "Failed logon attempt for unknown user with public source IP, indicating possible password-guessing attempt.",
+   "next_steps": [
+    "Investigate the source IP and determine if it's a legitimate user or a potential threat.",
+    "Verify the Wazuh agent configuration to ensure it's not being used for unauthorized access.",
+    "Monitor the system for further suspicious activity."
+   ]
+  }
+ },
+ {
+  "i": 3,
+  "rule": "5710",
+  "expected": "true_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 46.5,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "Failed logon attempt for an unknown user with a public source IP, indicating possible password-guessing attempt.",
+   "next_steps": [
+    "Review the system logs for any other suspicious activity.",
+    "Verify the system configuration to ensure all users have unique credentials.",
+    "Consider implementing additional security measures to prevent future attempts."
+   ]
+  }
+ },
+ {
+  "i": 4,
+  "rule": "92213",
+  "expected": "true_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 58.1,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1105",
+   "reasoning": "Executable file dropped in a folder commonly used by malware, indicating possible Command and Control activity. Asset criticality is high, raising severity.",
+   "next_steps": [
+    "Investigate the dropped executable file and its contents.",
+    "Monitor the system for further suspicious activity.",
+    "Verify the integrity of the system and ensure no other malicious activity is present."
+   ]
+  }
+ },
+ {
+  "i": 5,
+  "rule": "92052",
+  "expected": "true_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 35.4,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1059.003",
+   "reasoning": "Windows command prompt started by an abnormal process, indicating possible malicious activity. Asset criticality is high, raising severity.",
+   "next_steps": [
+    "Investigate abnormal process",
+    "Check system logs for further context",
+    "Verify if the process is legitimate or not"
+   ]
+  }
+ },
+ {
+  "i": 6,
+  "rule": "60122",
+  "expected": "true_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 57.1,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "Failed logon for an unknown user with a public source IP, indicating possible password-guessing attempt.",
+   "next_steps": [
+    "Investigate the source IP and determine if it's a legitimate IP address.",
+    "Check the Windows event logs for any other suspicious activity.",
+    "Verify the asset's configuration and ensure all systems are up-to-date."
+   ]
+  }
+ },
+ {
+  "i": 7,
+  "rule": "63104",
+  "expected": "true_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 35.2,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1070.001",
+   "reasoning": "Windows audit log was cleared, indicating possible defense evasion tactics.",
+   "next_steps": [
+    "Investigate Windows audit log history for any suspicious activity.",
+    "Verify if the log clearing was intentional or accidental.",
+    "Check for any other signs of defense evasion tactics."
+   ]
+  }
+ },
+ {
+  "i": 8,
+  "rule": "60122",
+  "expected": "true_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 56.6,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "Failed logon for an unknown user with a public source IP, indicating possible password-guessing attempt.",
+   "next_steps": [
+    "Investigate the source IP and user account to determine the authenticity of the logon attempt.",
+    "Verify if the user account exists and if the password is valid.",
+    "Monitor the system for further suspicious activity."
+   ]
+  }
+ },
+ {
+  "i": 9,
+  "rule": "60602",
+  "expected": "false_positive",
+  "raw": "needs_review",
+  "final": "false_positive",
+  "secs": 35.8,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "none",
+   "reasoning": "Application error on a Windows host with high asset criticality, but no attack indicator or suspicious user activity.",
+   "next_steps": [
+    "Investigate the application error to determine its cause.",
+    "Verify that the error is not related to a known vulnerability or patch.",
+    "Monitor the host for further application errors or other suspicious activity."
+   ]
+  }
+ },
+ {
+  "i": 10,
+  "rule": "60106",
+  "expected": "false_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 59.6,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "Successful logon by Ahtisham with public source IP, indicating possible password-guessing attempt.",
+   "next_steps": [
+    "Verify if Ahtisham has legitimate access to the system.",
+    "Check for any suspicious activity on the system.",
+    "Monitor the system for further potential attacks."
+   ]
+  }
+ },
+ {
+  "i": 11,
+  "rule": "5501",
+  "expected": "false_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 53.1,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1210",
+   "reasoning": "The login session opened for a user with critical asset criticality, indicating potential privilege escalation. Further investigation is required.",
+   "next_steps": [
+    "Verify the user's identity and ensure the login session is legitimate.",
+    "Monitor the user's activity for any suspicious behavior.",
+    "Review the system logs for any additional information."
+   ]
+  }
+ },
+ {
+  "i": 12,
+  "rule": "5502",
+  "expected": "false_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 38.1,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1210",
+   "reasoning": "Failed logon for a user with critical asset criticality, indicating possible unauthorized access. Further investigation is required.",
+   "next_steps": [
+    "Verify user ahtisham's identity and access permissions.",
+    "Check for any other suspicious logon attempts.",
+    "Monitor the system for further anomalies."
+   ]
+  }
+ },
+ {
+  "i": 13,
+  "rule": "60122",
+  "expected": "false_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 34.7,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "Failed logon for an unknown user with a public source IP, indicating possible password-guessing attempt.",
+   "next_steps": [
+    "Verify if the user exists in the system and if the password is indeed incorrect.",
+    "Check for any suspicious activity on the system.",
+    "Monitor the system for further logon attempts."
+   ]
+  }
+ },
+ {
+  "i": 14,
+  "rule": "5402",
+  "expected": "false_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 50.7,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1210",
+   "reasoning": "Successful sudo to ROOT executed by a user with critical asset role, indicating potential privilege escalation.",
+   "next_steps": [
+    "Investigate user ahtisham's privileges and access history.",
+    "Verify if the Wazuh manager and SOAR server have been compromised.",
+    "Monitor for further suspicious activity."
+   ]
+  }
+ },
+ {
+  "i": 15,
+  "rule": "60602",
+  "expected": "false_positive",
+  "raw": "needs_review",
+  "final": "false_positive",
+  "secs": 46.6,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "low",
+   "severity": "medium",
+   "mitre_technique": "none",
+   "reasoning": "Generic application error with no user, no source IP, and no attack indicator. This could be benign noise, but it's worth reviewing.",
+   "next_steps": [
+    "Review the application logs to determine the cause of the error.",
+    "Check the system event logs for any other errors or anomalies.",
+    "Verify that the application is functioning correctly and not causing any issues."
+   ]
+  }
+ },
+ {
+  "i": 16,
+  "rule": "60106",
+  "expected": "false_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 47.5,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "Failed logon for an unknown user, public source IP, and medium criticality suggest possible password-guessing attempt.",
+   "next_steps": [
+    "Verify user account information",
+    "Check for suspicious network activity",
+    "Monitor system logs for further activity"
+   ]
+  }
+ },
+ {
+  "i": 17,
+  "rule": "598",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 59.3,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1071",
+   "reasoning": "The alert indicates a registry key entry, which could be a sign of persistence. The asset criticality is high, so the severity is raised.",
+   "next_steps": [
+    "Investigate the registry key entry to determine its origin and purpose.",
+    "Check for any other suspicious activity on the system.",
+    "Verify the integrity of the system and its configurations."
+   ]
+  }
+ },
+ {
+  "i": 18,
+  "rule": "752",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 66.6,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1018",
+   "reasoning": "The alert indicates a registry value entry, which could be a sign of persistence. The asset criticality is high, so the severity is raised.",
+   "next_steps": [
+    "Investigate the registry value entry to determine its origin and purpose.",
+    "Check for any other suspicious activity on the system.",
+    "Verify the integrity of the system and its files."
+   ]
+  }
+ },
+ {
+  "i": 19,
+  "rule": "594",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 48.4,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1019",
+   "reasoning": "Registry Key Integrity Checksum Changed on a Windows host with high criticality, indicating possible persistence.",
+   "next_steps": [
+    "Investigate the registry key changes and verify if they are legitimate system changes.",
+    "Monitor the host for further suspicious activity.",
+    "Check the Windows event logs for any related errors or warnings."
+   ]
+  }
+ },
+ {
+  "i": 20,
+  "rule": "550",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 57.8,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1019",
+   "reasoning": "The integrity checksum changed on the Wazuh server, which could indicate a potential persistence attempt. Further investigation is required to determine the cause.",
+   "next_steps": [
+    "Investigate the Wazuh server logs for any suspicious activity",
+    "Verify the integrity checksum of the Wazuh server and ensure it is not tampered with",
+    "Monitor the Wazuh server for any further changes or anomalies"
+   ]
+  }
+ },
+ {
+  "i": 21,
+  "rule": "61138",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 45.6,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1018",
+   "reasoning": "New Windows Service Created on a high-criticality asset (Windows victim host (lab)) may indicate persistence. Further investigation is required.",
+   "next_steps": [
+    "Investigate the new Windows Service and its properties.",
+    "Check for any other suspicious activity on the host.",
+    "Verify the legitimacy of the new service."
+   ]
+  }
+ },
+ {
+  "i": 22,
+  "rule": "60109",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 59.3,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1018",
+   "reasoning": "User account enabled or created, asset criticality is high. This could be a legitimate user account creation, but it's worth reviewing.",
+   "next_steps": [
+    "Review user account creation process",
+    "Verify user account permissions and access",
+    "Check for any suspicious activity related to the user account"
+   ]
+  }
+ },
+ {
+  "i": 23,
+  "rule": "60122",
+  "expected": "needs_review",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 38.7,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "Failed logon for an unknown user with a public source IP, indicating possible password-guessing attempt.",
+   "next_steps": [
+    "Verify if the user exists in the system and if the password is indeed incorrect.",
+    "Check for any suspicious activity on the system.",
+    "Monitor the system for further logon attempts."
+   ]
+  }
+ },
+ {
+  "i": 24,
+  "rule": "5710",
+  "expected": "needs_review",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 59.1,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "Failed logon attempt for unknown user with public source IP, indicating possible password-guessing attempt.",
+   "next_steps": [
+    "Review the system logs for any other suspicious activity.",
+    "Verify the system configuration to ensure all users have unique credentials.",
+    "Monitor the system for any further attempts to login with unknown users."
+   ]
+  }
+ }
+]

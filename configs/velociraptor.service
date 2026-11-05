@@ -1,0 +1,15 @@
+[Unit]
+Description=Velociraptor server (SentinelFlow lab)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ahtisham
+WorkingDirectory=/home/ahtisham/velociraptor
+ExecStart=/home/ahtisham/velociraptor/velociraptor --config /home/ahtisham/velociraptor/server.config.yaml frontend -v
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=20000
+
+[Install]
+WantedBy=multi-user.target

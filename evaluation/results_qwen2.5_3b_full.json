@@ -1,0 +1,506 @@
+[
+ {
+  "i": 1,
+  "rule": "60204",
+  "expected": "true_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 62.3,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "The alert involves multiple Windows logon failures from an unknown user with a public source IP, indicating a possible password-guessing attempt.",
+   "next_steps": [
+    "Monitor the affected system for further suspicious activity.",
+    "Change the administrator password immediately.",
+    "Review the system logs for any additional signs of unauthorized access."
+   ]
+  }
+ },
+ {
+  "i": 2,
+  "rule": "5712",
+  "expected": "true_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 38.2,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "medium",
+   "severity": "high",
+   "mitre_technique": "T1110",
+   "reasoning": "Alert involves a failed logon attempt from an unknown user with a public source IP, indicating a possible password-guessing attempt.",
+   "next_steps": [
+    "Investigate the root user's account for suspicious activity.",
+    "Review SSHD logs for additional failed login attempts.",
+    "Implement additional security measures to prevent brute force attacks."
+   ]
+  }
+ },
+ {
+  "i": 3,
+  "rule": "5710",
+  "expected": "true_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 32.1,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "This is a failed login attempt by an unknown user with a public source IP.",
+   "next_steps": [
+    "Monitor the affected asset closely.",
+    "Review recent login attempts and user activity.",
+    "Consider implementing additional security measures."
+   ]
+  }
+ },
+ {
+  "i": 4,
+  "rule": "92213",
+  "expected": "true_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 49.1,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "high",
+   "mitre_technique": "T1105",
+   "reasoning": "The alert involves a system change (T1105) on a high-criticality asset, indicating potential persistence.",
+   "next_steps": [
+    "Investigate the file dropped in the malware common folder",
+    "Check for other suspicious activities on the host",
+    "Review the system logs for further context"
+   ]
+  }
+ },
+ {
+  "i": 5,
+  "rule": "92052",
+  "expected": "true_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 33.3,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1059.003",
+   "reasoning": "The alert involves a Windows command prompt started by an abnormal process on a high-criticality asset.",
+   "next_steps": [
+    "Investigate the process that started the command prompt.",
+    "Check for any suspicious commands or activities.",
+    "Review system logs for additional context."
+   ]
+  }
+ },
+ {
+  "i": 6,
+  "rule": "60122",
+  "expected": "true_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 39.9,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "The alert involves a failed logon attempt by an unknown user from a public IP, indicating a possible password-guessing attempt.",
+   "next_steps": [
+    "Monitor the affected user account for further suspicious activity.",
+    "Review the security logs for any additional failed login attempts.",
+    "Consider changing the password for the affected user account."
+   ]
+  }
+ },
+ {
+  "i": 7,
+  "rule": "63104",
+  "expected": "true_positive",
+  "raw": "false_positive",
+  "final": "needs_review",
+  "secs": 44.5,
+  "error": null,
+  "llm": {
+   "verdict": "false_positive",
+   "confidence": "medium",
+   "severity": "low",
+   "mitre_technique": "none",
+   "reasoning": "The alert describes a Windows event log being cleared, which is a known benign action and not indicative of malicious activity.",
+   "next_steps": [
+    "Review the event log for any other suspicious entries.",
+    "Monitor the system for any unusual activity.",
+    "Consider increasing the alert threshold for similar events."
+   ]
+  }
+ },
+ {
+  "i": 8,
+  "rule": "60122",
+  "expected": "true_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 39.5,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "The alert involves a failed logon for an unknown user on a high-criticality asset, indicating a potential password-guessing attempt.",
+   "next_steps": [
+    "Monitor the system for further suspicious activity.",
+    "Review recent login logs for patterns or anomalies.",
+    "Consider changing the password for the suspected user."
+   ]
+  }
+ },
+ {
+  "i": 9,
+  "rule": "60602",
+  "expected": "false_positive",
+  "raw": "needs_review",
+  "final": "false_positive",
+  "secs": 45.4,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "The alert involves a high-criticality asset with a generic application error, which could indicate persistence attempts.",
+   "next_steps": [
+    "Investigate the event count and source IP for further context.",
+    "Review the asset's configuration for any unusual changes.",
+    "Monitor the system for additional suspicious activities."
+   ]
+  }
+ },
+ {
+  "i": 10,
+  "rule": "60106",
+  "expected": "false_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 41.2,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "The alert describes a Windows logon success for a high-criticality asset, which could indicate a legitimate user login or a potential password-guessing attempt.",
+   "next_steps": [
+    "Verify the user's credentials and login history.",
+    "Check for any recent changes in the user's environment or permissions.",
+    "Monitor for any unusual activity or further alerts related to this user."
+   ]
+  }
+ },
+ {
+  "i": 11,
+  "rule": "5501",
+  "expected": "false_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 32.8,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "The alert involves a login session opened by an unknown user with a public source IP, indicating a possible password-guessing attempt.",
+   "next_steps": [
+    "Investigate the login session for any suspicious activity.",
+    "Review the user's access logs for additional context.",
+    "Consider increasing monitoring for this user and asset."
+   ]
+  }
+ },
+ {
+  "i": 12,
+  "rule": "5502",
+  "expected": "false_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 52.1,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "The alert involves a login session closure for a critical asset owner with no source IP and no attack indicator, indicating a potential password-guessing attempt.",
+   "next_steps": [
+    "Review the login session closure logs for further investigation.",
+    "Monitor for additional suspicious activities.",
+    "Consider implementing additional security measures for the critical asset."
+   ]
+  }
+ },
+ {
+  "i": 13,
+  "rule": "60122",
+  "expected": "false_positive",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 31.8,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "A failed logon attempt from an unknown user on a high-criticality asset.",
+   "next_steps": [
+    "Monitor the account for further suspicious activity.",
+    "Review recent login logs for patterns or anomalies.",
+    "Consider changing the account password if it's a critical system."
+   ]
+  }
+ },
+ {
+  "i": 14,
+  "rule": "5402",
+  "expected": "false_positive",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 40.0,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "The alert involves a sudo to ROOT, which could indicate persistence or unauthorized access on a critical asset.",
+   "next_steps": [
+    "Investigate the sudo to ROOT action",
+    "Check for other suspicious activities",
+    "Review system logs for further context"
+   ]
+  }
+ },
+ {
+  "i": 15,
+  "rule": "60602",
+  "expected": "false_positive",
+  "raw": "false_positive",
+  "final": "false_positive",
+  "secs": 41.6,
+  "error": null,
+  "llm": {
+   "verdict": "false_positive",
+   "confidence": "low",
+   "severity": "low",
+   "mitre_technique": "none",
+   "reasoning": "No user, no source IP, and no attack indicator, and the asset criticality is low.",
+   "next_steps": [
+    "Review the alert for any recent changes or anomalies",
+    "Monitor the system for further suspicious activity",
+    "Consider increasing alert severity if similar events occur"
+   ]
+  }
+ },
+ {
+  "i": 16,
+  "rule": "60106",
+  "expected": "false_positive",
+  "raw": "false_positive",
+  "final": "false_positive",
+  "secs": 51.4,
+  "error": null,
+  "llm": {
+   "verdict": "false_positive",
+   "confidence": "low",
+   "severity": "low",
+   "mitre_technique": "none",
+   "reasoning": "The alert describes a Windows logon success event with a low asset criticality. There are no user, source IP, or attack indicators, making it benign noise.",
+   "next_steps": [
+    "Review the asset criticality setting",
+    "Monitor for similar alerts",
+    "Consider increasing asset criticality if appropriate"
+   ]
+  }
+ },
+ {
+  "i": 17,
+  "rule": "598",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 51.9,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1055",
+   "reasoning": "The asset criticality is high and the alert involves a system registry key change, which could indicate persistence.",
+   "next_steps": [
+    "Investigate the registry change for potential malicious activity.",
+    "Review system logs for additional context.",
+    "Contact the asset owner for further verification."
+   ]
+  }
+ },
+ {
+  "i": 18,
+  "rule": "752",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 36.2,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1055",
+   "reasoning": "The asset criticality is high and the alert involves a system registry change, which could indicate persistence.",
+   "next_steps": [
+    "Investigate the registry change for potential malicious activity.",
+    "Review system logs for additional context.",
+    "Contact the owner for further verification."
+   ]
+  }
+ },
+ {
+  "i": 19,
+  "rule": "594",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 34.7,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1055",
+   "reasoning": "The asset criticality is high and the alert involves a system change (registry key integrity check)",
+   "next_steps": [
+    "Investigate the registry change for potential unauthorized access",
+    "Review system logs for additional context",
+    "Consider applying security patches if the change is related to known vulnerabilities"
+   ]
+  }
+ },
+ {
+  "i": 20,
+  "rule": "550",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 41.4,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "high",
+   "mitre_technique": "T1055",
+   "reasoning": "The asset is critical and the alert involves a system change (integrity checksum changed).",
+   "next_steps": [
+    "Investigate the change in integrity checksum",
+    "Check for unauthorized access or tampering",
+    "Review system logs for additional context"
+   ]
+  }
+ },
+ {
+  "i": 21,
+  "rule": "61138",
+  "expected": "needs_review",
+  "raw": "needs_review",
+  "final": "needs_review",
+  "secs": 48.7,
+  "error": null,
+  "llm": {
+   "verdict": "needs_review",
+   "confidence": "high",
+   "severity": "medium",
+   "mitre_technique": "T1055",
+   "reasoning": "The alert involves a new Windows service creation on a high-criticality asset, which could indicate persistence.",
+   "next_steps": [
+    "Investigate the new service for unauthorized or suspicious configurations.",
+    "Check for any unusual service dependencies or startup behaviors.",
+    "Review the system logs for any related events or anomalies."
+   ]
+  }
+ },
+ {
+  "i": 22,
+  "rule": "60109",
+  "expected": "needs_review",
+  "raw": "false_positive",
+  "final": "needs_review",
+  "secs": 46.7,
+  "error": null,
+  "llm": {
+   "verdict": "false_positive",
+   "confidence": "low",
+   "severity": "low",
+   "mitre_technique": "none",
+   "reasoning": "The alert describes a user account being enabled or created, which is not indicative of a security threat and the asset criticality is high, warranting a low severity.",
+   "next_steps": [
+    "Review the user account creation process for any anomalies",
+    "Monitor the user account for any unusual activity",
+    "Consider increasing the alert threshold for similar events"
+   ]
+  }
+ },
+ {
+  "i": 23,
+  "rule": "60122",
+  "expected": "needs_review",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 34.3,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "medium",
+   "severity": "medium",
+   "mitre_technique": "T1110",
+   "reasoning": "A failed logon attempt from an unknown user with a non-public source IP.",
+   "next_steps": [
+    "Review security logs for additional suspicious activity.",
+    "Check for unauthorized access attempts.",
+    "Ensure password policies are in place and enforced."
+   ]
+  }
+ },
+ {
+  "i": 24,
+  "rule": "5710",
+  "expected": "needs_review",
+  "raw": "true_positive",
+  "final": "true_positive",
+  "secs": 36.4,
+  "error": null,
+  "llm": {
+   "verdict": "true_positive",
+   "confidence": "medium",
+   "severity": "high",
+   "mitre_technique": "T1110",
+   "reasoning": "A failed login attempt using a non-existent user on a critical asset.",
+   "next_steps": [
+    "Monitor the system for further suspicious activity.",
+    "Review recent SSH access logs for additional context.",
+    "Consider implementing additional authentication methods."
+   ]
+  }
+ }
+]
