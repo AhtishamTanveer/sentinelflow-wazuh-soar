@@ -1,0 +1,24 @@
+{
+  "win-host": {
+    "owner": "Ahtisham",
+    "role": "Windows victim host (lab)",
+    "criticality": "high",
+    "velociraptor_client_id": "C.fd48b86e87022284"
+  },
+  "wazuh": {
+    "owner": "Ahtisham",
+    "role": "Wazuh manager and SOAR server",
+    "criticality": "critical"
+  },
+  "192.168.56.1": {
+    "owner": "Ahtisham",
+    "role": "Windows victim host (lab)",
+    "criticality": "high",
+    "velociraptor_client_id": "C.fd48b86e87022284"
+  },
+  "192.168.56.20": {
+    "owner": "Ahtisham",
+    "role": "Wazuh manager and SOAR server",
+    "criticality": "critical"
+  }
+}

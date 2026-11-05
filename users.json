@@ -1,0 +1,6 @@
+{
+  "ahtisham": {"department": "Lab owner", "privileged": true, "status": "active"},
+  "administrator": {"department": "Built-in admin", "privileged": true, "status": "active"},
+  "labuser": {"department": "Test user", "privileged": false, "status": "active"},
+  "jsmith": {"department": "Finance (test persona)", "privileged": false, "status": "active"}
+}

@@ -1,0 +1,16 @@
+.iris_key
+.abuse_key
+.vt_key
+*.key
+*.config.yaml
+.env
+*.jsonl
+*.log
+feeds/misp.db
+feeds/hashes.csv
+feeds/manifest.json
+evaluation/log_*.txt
+evaluation/results_*_quick.json
+venv/
+__pycache__/
+.pytest_cache/
