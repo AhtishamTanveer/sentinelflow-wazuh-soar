@@ -2,7 +2,7 @@
 
 **AI-assisted SOAR pipeline for an 8 GB lab: Wazuh alerts are grouped, enriched, triaged by a local LLM, validated by code, sent to DFIR-IRIS, with automatic Velociraptor evidence collection.**
 
-Everything is open-source and the whole lab runs on one laptop with **8 GB of RAM**.
+The tools are open-source or free to use (Wazuh, DFIR-IRIS, Velociraptor, FastAPI, Ollama, and free-tier AbuseIPDB and VirusTotal keys), the models keep their own licenses, and the whole lab runs on one laptop with **8 GB of RAM**.
 
 ![Architecture](docs/architecture.png)
 
@@ -155,6 +155,9 @@ feeds/       build_db.py
 configs/     Wazuh integration, systemd units
 docs/        architecture.png, screenshots/
 ```
+## License
+
+The code in this repository is released under the MIT License (see `LICENSE`). Wazuh, DFIR-IRIS, Velociraptor, the Ollama models and the CIRCL OSINT feed keep their own licenses and terms.
 
 ## Author
 
